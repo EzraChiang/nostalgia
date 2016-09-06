@@ -1,21 +1,25 @@
-<nav>
+<div class="black_bar"></div>
 
-<!--   <span class="branding">
-    Sinatra MVC<span> by ianlucas1</span>
-  </span>
- -->  
+<div class="container">
 
-<!-- NEEDS TO BE 'false' UNTIL I MAKE THE USER.RB HELPER FILE -->
-  <ul>
+<!-- 'current_user' NEEDS TO BE 'false' UNTIL I MAKE THE USER.RB HELPER FILE -->
+ 
+  <nav>
+  
+    <div class="navbar">
+      <% if current_user %>
+        <a href="/logout"><%= erb :'/sessions/logout_form' %></a>
+        <a href="/profile">Profile</a>
+        <a href="/">Home</a>
+      <% else %>
+        <a href="/login">Login</a>
+        <a href="/register">Create Account</a>
+        <a href="/">Home</a>
+      <% end %>
+    </div>
 
-    <% if current_user %>
-      <li><a href="/profile">Profile</a></li>
-      <li><%= erb :'/sessions/logout_form' %></li>
-    <% else %>
-      <li><a href="/register">Sign up</a></li>
-      <li><a href="/login">Login</a></li>
-    <% end %>
-    
-  </ul>
+  </nav>
+  
+</div>
 
-</nav>
+

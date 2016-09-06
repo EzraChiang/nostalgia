@@ -8,9 +8,11 @@ end
 post '/login' do
 
   user_params = params[:user]
-  
+  p user_params
+
   @user = User.authenticate(user_params[:email], user_params[:password])
-  
+  p @user
+
   if @user
     session[:user_id] = @user.id
     redirect :'/profile'

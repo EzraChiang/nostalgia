@@ -8,7 +8,6 @@ end
 
 # show user profile
 get '/profile' do
-  @user = User.find(session[:id])
   erb :'/users/profile'
 end
 

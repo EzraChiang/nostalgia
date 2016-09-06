@@ -7,6 +7,7 @@
     See: http://necolas.github.com/normalize.css/ -->
 
     <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/application.css">
   
   <!-- application.css is where you put your styles -->
   
@@ -19,12 +20,17 @@
 </head>
 
 <body>
+  
 
   <%= erb :'layouts/_header' %>
-
+  
   <div class="container">
-    <%= yield %>
+  
+  <%= yield %>
+  
   </div>
+
+  <footer class="footer">&copy; 2016 Ian Lucas, Absolutely no rights reserved</footer>
 
 </body>
 

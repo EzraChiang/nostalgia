@@ -1,0 +1,61 @@
+.body{
+  margin: 0 auto;
+  padding: 0 auto;
+  height: 100%;
+  display: flex;
+}
+.black_bar{
+  background-color: black;
+  height: 30px;
+}
+nav{
+  padding-top: 20px;
+}
+.navbar a{
+  margin-top: 5px;
+  display: inline-block;
+  padding: 3px;
+  border: 1px solid grey;
+  background-color: grey;
+  margin-right: 2px;
+  text-decoration: none;
+  color: white;
+  float: right;
+}
+.container{
+  width: 850px;
+  margin: 0 auto;
+  padding: 0 auto;
+  min-height: 100%; /**/
+  flex: 1; /**/
+  padding: 20px; /**/
+}
+.user_name{
+  position: relative;
+  left: 40px;
+  top: 5px;
+  font-weight: 500;
+}
+.email{
+  color: #53b7ff;
+  position: relative;
+  left: 40px;
+  bottom: 10px;
+  font-size: 15px;
+}
+.logout_button{
+  background-color: grey;
+  text-decoration: none;
+  border:none; 
+  padding: 0;
+}
+.footer {
+  position: relative;
+  background-color: black;
+  bottom: -500px;
+  text-align: center;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+}
