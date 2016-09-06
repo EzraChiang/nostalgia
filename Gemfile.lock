@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    BCrypt (3.1.11)
     activemodel (4.2.0)
       activesupport (= 4.2.0)
       builder (~> 3.1)
@@ -17,6 +16,9 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.0)
     backports (3.6.4)
+    bcrypt (3.1.11)
+    bcrypt-ruby (3.1.5)
+      bcrypt (>= 3.1.3)
     builder (3.2.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
@@ -83,9 +85,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  BCrypt
   activerecord (~> 4.2.0)
   activesupport (~> 4.2.0)
+  bcrypt
+  bcrypt-ruby
   capybara
   factory_girl
   faker

@@ -6,7 +6,7 @@ end
 
 #Create new user
 post '/users' do
-  @user = User.create(params[:user])
+  @user = User.new(params[:user])
   if @user.save
     session[:user_id] = @user.id
     redirect '/profile'
@@ -19,5 +19,5 @@ end
 
 #Show user/:id
 get '/profile' do
-  erb :'/user/profile'
+  erb :'/users/profile'
 end
