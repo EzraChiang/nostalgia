@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    BCrypt (3.1.11)
     activemodel (4.2.0)
       activesupport (= 4.2.0)
       builder (~> 3.1)
@@ -82,6 +83,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  BCrypt
   activerecord (~> 4.2.0)
   activesupport (~> 4.2.0)
   capybara
