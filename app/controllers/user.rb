@@ -8,6 +8,7 @@ end
 
 # show user profile
 get '/profile' do
+  @user = User.find(session[:id])
   erb :'/users/profile'
 end
 
@@ -16,7 +17,7 @@ end
 
 # create new user
 post '/users' do
-  
+
   @user = User.create(params[:user])
   
   if @user.save
@@ -27,5 +28,6 @@ post '/users' do
     @errors = @user.errors.full_messages
     erb :'users/new'
   end
+
 end
 

@@ -1,0 +1,35 @@
+<% if @errors && @errors.any? %>
+  <ul class="errors">
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<form action="/users" method="post">
+  
+  <div>
+    <label for="first_name">First name:</label>
+    <input name="user[first_name]" placeholder="Jane" value="<%= @user.first_name %>"></input>
+  </div>
+  
+  <div>
+    <label for="last_name">Last name:</label>
+    <input name="user[last_name]" placeholder="Smith" value="<%= @user.last_name %>"></input>
+  </div>
+  
+  <div>
+    <label for="email">Email:</label>
+    <input name="user[email]" placeholder="jane@smith.com" value="<%= @user.email %>"></input>
+  </div>
+  
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" name="user[password]" placeholder="password"></input>
+  </div>
+  
+  <div>
+    <input type="submit" name="Signup" />
+  </div>
+
+</form>
