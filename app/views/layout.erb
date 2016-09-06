@@ -18,6 +18,9 @@
   <title></title>
 </head>
 <body>
-  <%= yield %>
+  <%= erb :'layouts/_header' %>
+  <div class="container">
+    <%= yield %>
+  </div>
 </body>
 </html>

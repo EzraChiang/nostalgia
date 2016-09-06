@@ -1,0 +1,14 @@
+<nav>
+  <span class="branding">
+    Sinatra MVC<span>by ianlucas1</span>
+  </span>
+  <ul>
+    <% if current_user %>
+      <li><a href="/profile">Profile</a></li>
+      <li><%= erb :'/sessions/logout_form' %></li>
+    <% else %>
+      <li><a href="/register">Register</a></li>
+      <li><a href="/login">Login</a></li>
+    <% end %>
+  </ul>
+</nav>
