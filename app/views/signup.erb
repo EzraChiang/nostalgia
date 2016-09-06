@@ -1,0 +1,18 @@
+<h1>Sign Up!</h1>
+
+<% if @errors %>
+  <section class="errors">
+    <ul>
+      <% @errors.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  </section>
+<% end %>
+
+<form class="signup" action="/users" method="post">
+  <input type="text" name="user[name]" placeholder="Full Name">
+  <input type="email" name="user[email]" placeholder="Email">
+  <input type="password" name="user[password]" placeholder="Password">
+  <input type="submit" value="SignUp">
+</form>
