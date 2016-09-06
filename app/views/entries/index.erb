@@ -1,0 +1,12 @@
+<h1>Cool blog site</h1>
+<h2>All posts</h2>
+<% @entries.each do |entry| %>
+ <p><b><%= entry.title %></b> <span>by <%= entry.author.username %></span> </p>
+  <p><%= entry.body %></p>
+<% end %>
+
+<% if logged_in %>
+  #new entries form
+
+
+<%end  %>

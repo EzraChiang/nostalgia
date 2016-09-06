@@ -1,0 +1,8 @@
+<% if current_user %>
+  <%= current_user.username %>'s profile page
+<% end %>
+<h2>entries</h2>
+<% current_user.entries.each do |entry| %>
+  <p><%= entry.title %></p>
+  <p><%= entry.body %></p>
+<% end %>
