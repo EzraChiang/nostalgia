@@ -4,7 +4,10 @@ class User < ActiveRecord::Base
   include BCrypt
 
   has_many :entries
+
   validates :email, :username, :password, { presence: true}
+  validates :password, length: { minimum: 6 }
+  validates :email, :username, {uniqueness: true}
 
 
   def password

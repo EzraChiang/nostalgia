@@ -7,17 +7,16 @@ get '/login' do
 end
 
 post '/login' do
-
-  puts params
   @current_user = User.authenticate(params[:username], params[:password])
-  session[:user_id] = @current_user.id
-  redirect :'/users/profile'
-
+  if @current_user
+    session[:user_id] = @current_user.id
+    redirect :'/users/profile'
+  else
+    status 418
+    erb :'sessions/login'
+  end
 end
 
-get '/logout' do
-
-end
 
 delete '/logout' do
   session[:user_id] = nil
