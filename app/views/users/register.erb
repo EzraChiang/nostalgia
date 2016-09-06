@@ -1,0 +1,23 @@
+<div class="main">
+<h1>Register</h1>
+
+<ul class="error-messages">
+  <% @user.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ul>
+
+<form method="post" action="/users">
+  <label for="first_name">First Name:</label>
+  <input type="text" name="user[first_name]"/><br>
+  <label for="last_name">Last Name:</label>
+  <input type="text" name="user[last_name]"/><br>
+  <label for="user_name">Username:</label>
+  <input type="text" name="user[user_name]"/><br>
+  <label for="email">Email:</label>
+  <input type="text" name="user[email]"/><br>
+  <label for="password">Password:</label>
+  <input type="password" name="user[password]"/><br>
+  <input class="button" type="submit" value="Register"/>
+</form>
+</div>

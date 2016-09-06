@@ -1,0 +1,56 @@
+.container {
+  margin: auto;
+  width: 80%;
+  border: 1px dotted black;
+}
+
+.main {
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+input {
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.button {
+  margin-top: 20px;
+  border: 2px solid;
+  border-radius: 25px;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+label {
+  display: block;
+}
