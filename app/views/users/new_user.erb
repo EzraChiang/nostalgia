@@ -1,0 +1,21 @@
+<%= erb :'_nav_bar' %>
+
+<div class="container">
+  <form action="/users" method="POST">
+    <h3>Please enter your full name:</h3>
+    <p><input type="text" name="user[full_name]"></input></p>
+    <h3>Please enter your email:</h3>
+    <p><input type="email" name="user[email]"></input></p>
+    <h3>Password:</h3>
+    <p><input type="password" name="user[password]"></input></p>
+    <p><input type="submit" value="Create new account"></p>
+  </form>
+    <% if @errors %>
+    <% @errors.each do |error| %>
+    <p><%= error %></p>
+    <% end %>
+    <% end %>
+</div>
+
+
+
