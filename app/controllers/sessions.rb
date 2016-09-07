@@ -18,3 +18,9 @@ post '/login' do
     erb :'sessions/login'
   end
 end
+
+#Logout (delete session)
+delete '/logout' do
+  session.delete(:user_id)
+  redirect :'/'
+end

@@ -1,4 +1,15 @@
 <h1>Home</h1>
 
-<a href="/login">Login</a>
-<a href="/register">Register</a>
+<% if logged_in? %>
+  <a href="/profile/<%= current_user.id %>">Profile</a>
+  <form class="delete" action="/logout" method="post">
+    <input type="hidden" name="_method" value="delete" />
+    <input type="submit" value="Logout" class="delete" />
+  </form>
+<% else %>
+  <a href="/login">Login</a>
+  <a href="/register">Register</a>
+<% end %>
+
+
+
