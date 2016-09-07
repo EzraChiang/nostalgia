@@ -1,0 +1,10 @@
+<h1>Register</h1>
+<% if @errors%>
+  <p> <%= @errors %> </p>
+<% end %>
+<!-- Registration Form -->
+<form action="/users" method="post">
+  <input type="text" name="user[name]" placeholder="name">
+  <input type="password" name="user[password]" placeholder="password">
+  <input type="submit" value="Login">
+</form>

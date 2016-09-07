@@ -1,0 +1,25 @@
+<div class="container">
+  <nav>
+    <form method='get' class="nav_logo" action='/'>
+      <input type='submit' value='Home'>
+    </form>
+    <% if session[:id] %>
+      <form method='post' class="nav_button" action='/login'>
+        <input type='hidden' name='_method' value='DELETE'>
+        <input type='submit' value='Logout'>
+      </form>
+      <form method='get' class="nav_button" action='/users/'>
+     <!--  <input type="hidden" value="<%#= @question.id %>" name="question_id"/> -->
+        <input type='submit' value='Profile'>
+      </form>
+      <!-- <a href="/users/">Profile</a> -->
+    <% else %>
+      <form method='get' class="nav_button" action='/login'>
+        <input type='submit' value='Login'>
+      </form>
+      <form method='get' class="nav_button" action="/users/new">
+        <input type='submit' value='Register'>
+      </form>
+    <% end %>
+  </nav>
+</div>
