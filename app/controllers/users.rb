@@ -1,20 +1,19 @@
 get '/users/' do
-  puts "(((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))"
-  puts session
   erb :homepage
 end
 
 post '/users' do
-  @user = User.new(params[:user])
-  if @user.valid? && (@user.password != "")
-    @user.save
-    session[:id] = @user.id
+  user = User.new(params[:user])
+  if user.valid?
+    user.save
+    session[:id] = user.id
     redirect'/'
-  elsif @user.password == ""
-    @errors = "Password had some issues!"
-  elsif @user.save == false
-    @errors = "User name had some issues!"
+  # elsif user.password == ""
+  #   @errors = "Password had some issues!"
+  # elsif user.save == false
+  #   @errors = "User name had some issues!"
   end
+
     status 422
     erb :register
 end
