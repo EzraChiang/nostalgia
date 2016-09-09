@@ -15,9 +15,9 @@ class User < ActiveRecord::Base
     self.hashed_password = @password
   end
 
-  def self.authentication(email, password)
+  def self.authenticate(email, password)
     @user = User.find_by(email: email)
-    return @user if @user && @user.passsword == password
+    return @user if @user && @user.password == password
   end
 
 

@@ -5,6 +5,7 @@ end
 post '/signup' do
   @new_user = User.new(params[:user])
   if @new_user && @new_user.save
+    session[:user_id] = @new_user.id
     redirect '/'
   else
     status 422
