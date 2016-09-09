@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   include BCrypt
 
   validates :name, :email, :hashed_password, { presence: true}
-
+  validates :email, { uniqueness: true }
   def password
     @password ||= BCrypt::Password.new(hashed_password)
   end

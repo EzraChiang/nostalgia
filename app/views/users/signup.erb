@@ -1,0 +1,17 @@
+<% if @errors %>
+  <%= erb :'_errors' , locals: { errors: @errors } %>
+<% end %>
+
+<form method="post" action="/signup">
+    <label for="new_user_name">Name</label>
+    <input id="new_user_name_input" name="user[name]" type="text">
+
+    <label for="new_user_email">Email:</label>
+    <input id="new_user_email_input" name="user[email]" type="email">
+
+    <label for="new_user_password">Password:</label>
+    <input id="new_user_password_input" name="user[password]" type="password">
+
+    <input type="submit" value="Sign Up" class="button">
+  </form>
+</main>
