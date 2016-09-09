@@ -15,7 +15,6 @@ post '/login' do
 
 end
 
-
 get '/logout' do
   session.destroy
   redirect '/'

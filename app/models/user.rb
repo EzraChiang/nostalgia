@@ -9,7 +9,6 @@ class User < ActiveRecord::Base
     @password ||= BCrypt::Password.new(hashed_password)
   end
 
-
   def password=(password)
     @password = BCrypt::Password.create(password)
     self.hashed_password = @password
@@ -19,10 +18,5 @@ class User < ActiveRecord::Base
     @user = User.find_by(email: email)
     return @user if @user && @user.password == password
   end
-
-
-
-
-
 
 end
