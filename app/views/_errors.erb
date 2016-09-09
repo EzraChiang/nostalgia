@@ -3,3 +3,10 @@
     <p> <%=error %></p>
   <% end %>
 </div>
+
+
+
+
+<% if @errors %>
+  <%= erb :'_errors' , locals: { errors: @errors } %>
+<% end %>

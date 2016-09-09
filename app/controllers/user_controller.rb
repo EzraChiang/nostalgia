@@ -7,6 +7,7 @@ post '/signup' do
   if @new_user && @new_user.save
     redirect '/'
   else
+    status 422
     @errors = @new_user.errors.full_messages
     erb :'users/signup'
   end
