@@ -1,7 +1,5 @@
 get '/' do
-redirect '/home'
+redirect '/decades'
 end
 
-get '/home' do
-  erb :'index'
-end
+

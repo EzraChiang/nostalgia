@@ -35,8 +35,8 @@ header {
 }
 #content {
 position: fixed;
-top: 68%;
-left: 35%;
+top: 70%;
+left: 30%;
 transform: translate(-50%, -50%);
 height: 450px;
 width: 600px;
@@ -45,7 +45,7 @@ width: 600px;
 #middle {
 position: fixed;
 top: 70%;
-left: 55%;
+left: 60%;
 transform: translate(-50%, -50%);
 height: 450px;
 width: 600px;

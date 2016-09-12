@@ -1,19 +1,17 @@
-<div class="container">
+<div id="response" class="container">
  <section id="content">
-    <img src="http://i.stack.imgur.com/B7Soz.gif" height="365" width="300">
+    <img src=<%= @memory.picture %> height="350" width="375">
   </section>
 
   <section id="middle">
     <iframe width="400" height="350"
-    src="https://www.youtube.com/embed/ffPmcvwn0qE?autoplay=1">
+    src=<%= @memory.video %>>
     </iframe>
   </section>
 
   <section id="sidebar">
-    <h2>MEGAMAN</h2>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-     <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    <h2><%= @memory.name %></h2>
+    <p><%= @memory.text %></p>
   </section>
 
 </div>
