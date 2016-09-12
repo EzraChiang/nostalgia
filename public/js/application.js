@@ -8,8 +8,7 @@ $(document).ready(function() {
     $(this).addClass("active");
     var tab = $(this).find("a").attr("href")
     console.log(tab)
-    $(tab).show();
-
+    $(tab).slideDown();
 
   });
 

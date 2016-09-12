@@ -18,3 +18,41 @@ transform: translate(-50%, -50%);
 height: 450px;
 width: 600px;
 }
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+  max-width: 100%
+}
+
+#pagewrap {
+  padding: 5px;
+  width: 960px;
+  margin: 20px auto;
+}
+header {
+  height: 100px;
+  padding: 0 15px;
+}
+#content {
+position: fixed;
+top: 68%;
+left: 35%;
+transform: translate(-50%, -50%);
+height: 450px;
+width: 600px;
+}
+
+#middle {
+position: fixed;
+top: 70%;
+left: 55%;
+transform: translate(-50%, -50%);
+height: 450px;
+width: 600px;
+}
+
+#sidebar {
+  width: 300px;
+  margin-top: -13px;
+  float:right;
+}
