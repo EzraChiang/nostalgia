@@ -36,23 +36,23 @@ header {
 #content {
 position: fixed;
 top: 70%;
-left: 30%;
+left: 35%;
 transform: translate(-50%, -50%);
 height: 450px;
-width: 600px;
+width: 33%;
 }
 
 #middle {
 position: fixed;
 top: 70%;
-left: 60%;
+left: 55%;
 transform: translate(-50%, -50%);
 height: 450px;
-width: 600px;
+width: 33%;
 }
 
 #sidebar {
-  width: 300px;
+  width: 33%;
   margin-top: -13px;
   float:right;
 }

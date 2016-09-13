@@ -8,11 +8,37 @@ CategoryDecade.create(category_id: 3, decade_id: 1)
 CategoryDecade.create(category_id: 4, decade_id: 1)
 CategoryDecade.create(category_id: 5, decade_id: 1)
 
+CategoryDecade.create(category_id: 6, decade_id: 2)
+CategoryDecade.create(category_id: 7, decade_id: 2)
+CategoryDecade.create(category_id: 8, decade_id: 2)
+CategoryDecade.create(category_id: 9, decade_id: 2)
+CategoryDecade.create(category_id: 10, decade_id: 2)
+
+CategoryDecade.create(category_id: 11, decade_id: 3)
+CategoryDecade.create(category_id: 12, decade_id: 3)
+CategoryDecade.create(category_id: 13, decade_id: 3)
+CategoryDecade.create(category_id: 14, decade_id: 3)
+CategoryDecade.create(category_id: 15, decade_id: 3)
+
 Category.create(name: "Cartoons")
 Category.create(name: "Sports")
 Category.create(name: "Video Games")
 Category.create(name: "Music")
 Category.create(name: "TV/MOVIES")
+
+
+Category.create(name: "Cartoons")
+Category.create(name: "Sports")
+Category.create(name: "Video Games")
+Category.create(name: "Music")
+Category.create(name: "TV/MOVIES")
+
+Category.create(name: "Cartoons")
+Category.create(name: "Sports")
+Category.create(name: "Video Games")
+Category.create(name: "Music")
+Category.create(name: "TV/MOVIES")
+
 CategoryMemory.create(category_id: 1, memory_id: 4)
 CategoryMemory.create(category_id: 1, memory_id: 5)
 CategoryMemory.create(category_id: 1, memory_id: 6)
@@ -28,6 +54,26 @@ CategoryMemory.create(category_id: 4, memory_id: 12)
 CategoryMemory.create(category_id: 5, memory_id: 13)
 CategoryMemory.create(category_id: 5, memory_id: 14)
 CategoryMemory.create(category_id: 5, memory_id: 15)
+CategoryMemory.create(category_id: 2, memory_id: 16)
+
+
+CategoryMemory.create(category_id: 6, memory_id: 17)
+CategoryMemory.create(category_id: 7, memory_id: 18)
+CategoryMemory.create(category_id: 8, memory_id: 19)
+CategoryMemory.create(category_id: 9, memory_id: 20)
+CategoryMemory.create(category_id: 10, memory_id: 21)
+
+CategoryMemory.create(category_id: 11, memory_id: 22)
+CategoryMemory.create(category_id: 12, memory_id: 23)
+CategoryMemory.create(category_id: 13, memory_id: 24)
+CategoryMemory.create(category_id: 14, memory_id: 25)
+CategoryMemory.create(category_id: 15, memory_id: 26)
+CategoryMemory.create(category_id: 15, memory_id: 27)
+CategoryMemory.create(category_id: 4, memory_id: 28)
+CategoryMemory.create(category_id: 1, memory_id: 29)
+CategoryMemory.create(category_id: 5, memory_id: 30)
+
+
 
 
 
@@ -46,6 +92,21 @@ Memory.create(name: "Enter Sandman", picture: "http://gravisludus.com/wp-content
 Memory.create(name: "Pulp Fiction", picture: "http://images.mentalfloss.com/sites/default/files/pulpfiction.jpeg", video: "https://www.youtube.com/embed/Mnb_3ibUp38?autoplay=1", text: "Pulp Fiction")
 Memory.create(name: "The Lion King", picture: "http://img.wallpaperfolder.com/f/460532E9BA43/cartoons-lion-king-timon-simba.jpg", video: "https://www.youtube.com/embed/HwSKkKrUzUk?autoplay=1", text: "The Lion King")
 Memory.create(name: "The Matrix", picture: "http://images.amcnetworks.com/ifc.com/wp-content/uploads/2015/01/The-Matrix.jpg", video: "https://www.youtube.com/embed/KNrSNcaYiZg?autoplay=1", text: "The Matrix")
+Memory.create(name: "Stone Cold Steve Austin", picture: "http://www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/Steve_Austin_bio.jpg", video: "https://www.youtube.com/embed/MOzjBO2dsmY?autoplay=1", text: "STONE COLD STEVE AUSTIN")
+Memory.create(name: "YU GI OH", picture: "https://i.ytimg.com/vi/2AKGWH-hcCk/maxresdefault.jpg", video: "https://www.youtube.com/embed/DOj6BLxB_4U?autoplay=1", text: "YU GI OH")
+Memory.create(name: "Sacramento Kings", picture: "http://cdn2.vox-cdn.com/assets/4709198/1037fc2e3696fe50c74abb21fd982e4d.jpg", video: "https://www.youtube.com/embed/e9vvy9m84-U?autoplay=1", text: "Sacramento Kings")
+Memory.create(name: "Kingdom Hearts II", picture: "http://vignette3.wikia.nocookie.net/kingdomhearts/images/b/b3/KH2-cover.png/revision/latest?cb=20121218160127", video: "https://www.youtube.com/embed/gUQuBBBzx-I?autoplay=1", text: "Kingdom Hearts II")
+Memory.create(name: "MGMT KIDS", picture: "http://img.wennermedia.com/660-width/rs-136114-e894fb4c61b4707398dbb0518efd1511cc181ab1.jpg", video: "https://www.youtube.com/embed/wFZYa1iOnCE?autoplay=1", text: "MGMT KIDS")
+Memory.create(name: "DARK KNIGHT", picture: "http://www.geek.com/wp-content/uploads/2016/02/batmans.jpg", video: "https://www.youtube.com/embed/_PZpmTj1Q8Q?autoplay=1", text: "DARK KNIGHT")
+Memory.create(name: "Adventure", picture: "http://www.infiniteguest.org/wp-content/uploads/2015/06/adventure-time.jpg", video: "https://www.youtube.com/embed/BHjg6cTxmrQ?autoplay=1", text: "Adventure Time")
+Memory.create(name: "SF GIANTS", picture: "http://sports-rings.com/newsletter_images/flan1.jpg", video: "https://www.youtube.com/embed/uogT8X26-ko?autoplay=1", text: "San Francisco Giants")
+Memory.create(name: "Final Fantasy XV", picture: "http://static1.gamespot.com/uploads/screen_kubrick/1365/13658182/2917045-finalfantasy15_e32015_20150610_v1thumb.jpg", video: "https://www.youtube.com/embed/otVk3EEjgd8?autoplay=1", text: "Final Fantasy XV")
+Memory.create(name: "Porter Robinson Divinity", picture: "https://i.ytimg.com/vi/si81bIoZRJQ/maxresdefault.jpg", video: "https://www.youtube.com/embed/si81bIoZRJQ?autoplay=1", text: "Porter Robinson Divinity")
 
+Memory.create(name: "Game of Thrones", picture: "https://i.kinja-img.com/gawker-media/image/upload/c9lzmv4d3mgzpnyntz7s.jpg", video: "https://www.youtube.com/embed/s7L2PVdrb_8?autoplay=1", text: "Game of Thrones")
 
+Memory.create(name: "Star Wars Episode VII", picture: "https://mostlyfilm.files.wordpress.com/2015/12/star-wars-7-the-force-awakens-could-kylo-ren-really-be-a-skywalker-668067.jpg", video: "https://www.youtube.com/embed/sGbxmsDFVnE?autoplay=1", text: "Star Wars Episode VII")
+Memory.create(name: "Everlong", picture: "http://www.musiclipse.com/wp-content/uploads/2014/03/Foo-Fighters-Logo.jpg", video: "https://www.youtube.com/embed/8pHELrsqGgU?autoplay=1", text: "Everlong")
+Memory.create(name: "Pokemon", picture: "http://vignette2.wikia.nocookie.net/pokemon/images/e/ef/025Pikachu_Pokemon_Mystery_Dungeon_Red_and_Blue_Rescue_Teams.png/revision/latest?cb=20150105233050", video: "https://www.youtube.com/embed/NcfdoSuC6MI?autoplay=1", text: "Pokemon!")
+Memory.create(name: "Mighty Morphing Power Rangers", picture: "http://assets1.ignimgs.com/2016/05/06/mighty-morphin-s1-power-rangersjpg-652e5e_765w.jpg", video: "https://www.youtube.com/embed/HWzYln3md4I?autoplay=1", text: "Power Rangers")
 
