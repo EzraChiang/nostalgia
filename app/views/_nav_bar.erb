@@ -1,0 +1,16 @@
+<nav>
+  <% if session[:id] %>
+    <a href="/">Home</a>
+    <a href="/users/profile">Profile</a>
+
+    <form method='POST' action='/users/logout'>
+      <input type="hidden" name="_method" value='delete'>
+      <input type="submit" name="logout" value='logout'>
+    </form>
+
+  <% else %>
+    <a href="/">Home</a>
+    <a href="/users/login">Login</a>
+    <a href="/users/new">New User</a>
+  <% end %>
+</nav>
