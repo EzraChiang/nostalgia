@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :posts
   has_many :comments
+  has_many :ratings
 
   validates :email, :username, presence: true
   validates :email, :username, uniqueness: true

@@ -46,6 +46,22 @@ $(document).ready(function() {
       $(".new-comment-form").hide().trigger("reset");
       $("#comment-btn").show();
       $(".comments").append(response);
+    });
+  });
+
+  $("#rating").on("submit", function(e){
+    e.preventDefault();
+    $(this).hide();
+    var url = $(this).attr("action");
+    var data = $(this).serialize();
+    $.ajax({
+      url: url,
+      data: data,
+      method: "POST",
+      data_type: "json"
     })
-  })
+    .done(function(response){
+      $("#rating-total").html(response);
+    });
+  });
 });

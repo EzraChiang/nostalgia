@@ -51,3 +51,24 @@ post '/posts/:id/comment' do
   end
 
 end
+
+post "/posts/:id/rating" do
+  @post = Post.find(params[:id])
+  rating = Rating.new(rating: params[:rating], user_id: session[:id], post_id: @post.id)
+  if rating.save
+    if request.xhr?
+      erb :"rating/_rating", layout: false
+    else
+      redirect "/posts/#{@post.id}"
+    end
+  else
+    status 422
+    redirect "/posts/#{@post.id}"
+  end
+
+end
+
+
+
+
+

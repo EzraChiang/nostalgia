@@ -1,8 +1,29 @@
 <h1><%= @post.title %></h1>
+
+<% if @post.ratings.empty? %>
+  <div id="rating-total">
+    <h4>No Ratings Yet</h4>
+  </div>
+<% else %> 
+  <div id="rating-total">
+    <%= erb :"rating/_rating" %>
+  </div>
+<% end %> 
+
+<% if session[:id] %>
+  <form id="rating" action="/posts/<%= @post.id %>/rating" method="POST">
+    <input type="range" name="rating" min="0" max="5">
+    <input id="rating-btn" type="submit" value="Rate">
+  </form>
+<% end %>  
+
 <h3>Author: <%= @post.user.username %></h3>
 <p><%= @post.body %></p>
 
-<button id="comment-btn">New Comment</button>
+
+<% if session[:id] %>
+  <button id="comment-btn">New Comment</button>
+<% end %>
 
 <form class="new-comment-form" action="/posts/<%= @post.id %>/comment" method="POST">
   <p><textarea name="comment" class="title-input" cols="50" rows="10" placeholder="Comment"></textarea></p>
@@ -10,7 +31,7 @@
 </form>
 <div class="comments">
   <h2>Comments:</h2>
-    <% @post.comments.each do |comment| %>
-      <%= erb :'/comment/show', locals: {comment: comment} %>
-    <% end %>
+  <% @post.comments.each do |comment| %>
+    <%= erb :'/comment/show', locals: {comment: comment} %>
+  <% end %>
 </div>
