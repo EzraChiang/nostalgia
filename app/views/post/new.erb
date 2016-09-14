@@ -1,0 +1,6 @@
+<%= erb :_errors, locals: {errors: @errors} %>
+<form id="post-form" action="/posts" method="POST">
+  <input class="title-input" type="text" name="title" placeholder="title">
+  <p><textarea class="title-input" cols="50" rows="10" name="body" placeholder="body"></textarea></p>
+  <input type="submit" value="Create New Post">
+</form>

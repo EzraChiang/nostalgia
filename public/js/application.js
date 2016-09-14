@@ -1,7 +1,51 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $("nav").on('click', '#new-post', function(e){
+    e.preventDefault();
+    $("#post-form").remove();
+    $.ajax({
+      url: '/posts/new',
+      method: 'get'
+    })
+    .done(function(response){
+      $('.container').prepend(response);
+    })
+  });
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $(".container").on('submit', '#post-form', function(e){
+    e.preventDefault();
+    var url = $(this).attr("action");
+    var data = $(this).serialize();
+    $.ajax({
+      url: url,
+      data: data,
+      method: "POST"
+    })
+    .done(function(response){
+      $("#post-form").hide();
+      $('.container').append(response);
+    })
+  })
+
+  $(".container").on('click', '#comment-btn', function(e){
+    e.preventDefault();
+    $(this).hide();
+    $(".new-comment-form").slideDown();
+  });
+
+  $(".container").on('submit', '.new-comment-form', function(e){
+    e.preventDefault();
+    var url = $(this).attr('action');
+    var data = $(this).serialize();
+
+  $.ajax({
+      method: "POST",
+      url: url,
+      data: data
+    })
+    .done(function(response){
+      $(".new-comment-form").hide().trigger("reset");
+      $("#comment-btn").show();
+      $(".comments").append(response);
+    })
+  })
 });

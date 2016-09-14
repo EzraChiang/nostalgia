@@ -1,0 +1,16 @@
+<h1><%= @post.title %></h1>
+<h3>Author: <%= @post.user.username %></h3>
+<p><%= @post.body %></p>
+
+<button id="comment-btn">New Comment</button>
+
+<form class="new-comment-form" action="/posts/<%= @post.id %>/comment" method="POST">
+  <p><textarea name="comment" class="title-input" cols="50" rows="10" placeholder="Comment"></textarea></p>
+  <input type="submit" value="Post Comment">
+</form>
+<div class="comments">
+  <h2>Comments:</h2>
+    <% @post.comments.each do |comment| %>
+      <%= erb :'/comment/show', locals: {comment: comment} %>
+    <% end %>
+</div>

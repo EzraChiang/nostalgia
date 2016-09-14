@@ -1,0 +1,54 @@
+.container, nav {
+  width: 800px;
+  margin: auto;
+}
+
+.container {
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+nav {
+  background-color: black;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+nav a{
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  font-weight: bold;
+  color: limegreen;
+}
+
+.post {
+  width: 100%;
+  margin: 5px;
+  border: 2px solid black;
+}
+
+.post:hover {
+  background-color: lightgray;
+}
+
+.post a {
+
+  text-decoration: none;
+}
+
+.title-input {
+  padding: 5px;
+  border: 1px solid black;
+  width: 410px;
+}
+
+.new-comment-form{
+  display: none;
+}
