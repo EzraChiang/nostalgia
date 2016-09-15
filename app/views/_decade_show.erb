@@ -1,15 +1,15 @@
 <div id="response" class="container">
- <section id="content">
+ <section id="content" class="col-md-4 container-fluid">
     <img src=<%= @memory.picture %> height="350" width="375">
   </section>
 
-  <section id="middle">
+  <section id="middle" class="col-md-4 container-fluid">
     <iframe width="400" height="350"
     src=<%= @memory.video %>>
     </iframe>
   </section>
 
-  <section id="sidebar">
+  <section id="sidebar" class="col-md-4 container-fluid">
     <h2><%= @memory.name %></h2>
     <p><%= @memory.text %></p>
   </section>
