@@ -1,12 +1,16 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">PROFILE</a>
+      <a class="navbar-brand" href="/">HOME</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Login</a></li>
-      <li><a href="#">Sign Up</a></li>
+    <% if session[:id] %>
+      <li><a href="/profile/<%= User.find(session[:id]).id %>"><%= User.find(session[:id]).username %></a></li>
+      <li><a href="/logout">Logout</a></li>
+    <% else %>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/users/new">Sign Up</a></li>
+    <% end  %>
     </ul>
   </div>
 </nav>

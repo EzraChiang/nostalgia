@@ -1,20 +1,103 @@
-#one{
-display: none;
+#one {
+    display: none;
 }
 
-#two{
-display: none;
+#two {
+    display: none;
 }
 
-#three{
-display: none;
+#three {
+    display: none;
 }
 
-#home-img{
-position: fixed;
-top: 70%;
-left: 50%;
-transform: translate(-50%, -50%);
-height: 450px;
-width: 600px;
+#home-img {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 450px;
+    width: 600px;
 }
+
+body {
+    font-family: 'Open Sans', sans-serif!important;
+    color: #666!important;
+    max-width: 100%!important;
+
+
+}
+
+#index {
+    background-image: url("https://wallpaperscraft.com/image/parrot_vector_drawing_bright_color_95908_1920x1080.jpg");
+}
+
+.jumbotron {
+    background-image: url("https://wallpaperscraft.com/image/pulp_pixel_people_minimalism_pulp_fiction_66196_1920x1080.jpg")!important;
+
+}
+
+
+
+#pagewrap {
+    padding: 5px;
+    width: 960px;
+    margin: 20px auto;
+}
+
+header {
+    height: 100px;
+    padding: 0 15px;
+}
+
+#response {
+  display: inline-block;
+  position: relative;
+  top: 265px;
+  left: 26%;
+}
+
+#content {
+    transform: translate(-50%, -50%);
+    height: 450px;
+    width: 33%;
+}
+
+#middle {
+    transform: translate(-50%, -50%);
+    height: 450px;
+    width: 33%;
+    position: relative;
+    left: 3%;}
+
+#sidebar {
+    width: 33%;
+    margin-top: -13px;
+    position: relative;
+    left: 10%;
+    top: -110px;
+    transform: translate(-50%, -50%)
+
+}
+
+.bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+}
+
+.bg-3 {
+    background-color: #ffffff;
+    color: #555555;
+}
+
+.memory {
+    padding-top: 15px;
+}
+
+#pictureform {
+    display: none;
+}
+
+#themeform {
+    display: none;
+}
+

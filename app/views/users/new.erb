@@ -1,0 +1,24 @@
+<div class="container">
+  <% if @errors && @errors.any? %>
+    <ul class="errors">
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
+  <h2>Sign Up</h2>
+    <form action="/users" method="POST">
+        <label>First Name:</label>
+          <p><input type="text" name="user[first_name]" placeholder="First Name"></input></p>
+        <label>Last Name:</label>
+          <p><input type="text" name="user[last_name]" placeholder="Last Name"></input></p>
+        <label>User Name:</label>
+          <p><input type="text" name="user[username]" placeholder="User Name"></input></p>
+        <label>Email:</label>
+          <p><input type="email" name="user[email]" placeholder="Email"></input></p>
+       <label>Password:</label>
+          <p><input type="password" name="user[password]" placeholder="password"></input></p>
+          <p><input type="submit" value="Register"></p>
+    </form>
+</div>
