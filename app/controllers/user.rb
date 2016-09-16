@@ -33,6 +33,23 @@ get '/profile/:id' do
   end
 end
 
+get '/users/event/new' do
+  erb :"users/eventnew"
+end
+
+post '/users/events' do
+  @user = User.find(session[:id])
+  @event = Event.new(url: params[:url], description: params[:description], user_id: @user.id)
+
+  if @event.save
+    redirect "/profile/#{@user.id}"
+  else
+    status 422
+    @errors = @event.errors.full_messages
+    erb :"users/eventnew"
+  end
+end
+
 get '/login' do
   erb :'/users/login'
 end

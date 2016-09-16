@@ -28,12 +28,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Add a Memory</a>
-          <form action="/users/newpicture" method="post">
-            <input type="hidden" name="_method" value="put">
-            <p><input type="text" name="profile_pic" placeholder="ENTER A URL"></input></p>
-            <p><input type="submit" value="SET PICTURE"></p>
-          </form>
+        <li><a href="/users/event/new">Add an event</a>
         </li>
         <li><a id="themebutton" href="#">Change my theme</a>
           <form id="themeform" action="/profile/<%= @user.id %>/theme" method="post">
