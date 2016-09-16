@@ -211,8 +211,12 @@ $(document).ready(function() {
 
     $("body").on("click", "#membutton", function(event) {
         event.preventDefault();
+        var url = $(this).attr("href")
         $.ajax({
-
+            method: "GET",
+            url: url,
+        }).done(function(response){
+            $(".eventshow").html(response)
         })
     })
 

@@ -26,8 +26,8 @@ get '/profile/:id' do
   @user = User.find(params[:id])
   @song = @user.songs.sample.url
   @events = @user.events.sample(3)
-  if requst.xhr?
-    "Hello World"
+  if request.xhr?
+    erb :"users/_eventshow", layout: false
   else
     erb :"/users/profile"
   end

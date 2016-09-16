@@ -1,0 +1,9 @@
+<h3>My Events</h3>
+<div class="row">
+  <% @events.each do |event| %>
+  <div class="col-sm-4">
+    <p><%= event.description %></p>
+    <img class="img-rounded" src="<%= event.url %>" style="width:400px; height:400px; alt="Image">
+  </div>
+  <% end %>
+</div>
