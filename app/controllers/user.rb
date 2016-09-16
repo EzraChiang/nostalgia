@@ -38,3 +38,23 @@ get '/logout' do
   session.delete(:id)
   redirect '/'
 end
+
+put '/profile/:id/pic' do
+  @user = User.find(params[:id])
+  if request.xhr? && @user.update(profile_pic: params[:profile_pic])
+    erb :'users/_profilepic', layout: false
+  else
+    status 422
+    redirect '/'
+  end
+end
+
+put '/profile/:id/theme' do
+  @user = User.find(params[:id])
+  if request.xhr? && @user.update(profile_theme: params[:profile_theme])
+    erb :'users/_theme', layout: false
+  else
+    status 422
+    redirect '/'
+  end
+end

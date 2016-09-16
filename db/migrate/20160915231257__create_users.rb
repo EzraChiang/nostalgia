@@ -7,8 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :username, null: false
       t.string :password_hash, null: false
       t.string :profile_pic
-      t.string :profile_background
-      t.string :profile_song
+      t.string :profile_theme
 
       t.timestamps(null: false)
     end

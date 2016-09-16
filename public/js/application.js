@@ -212,4 +212,48 @@ $(document).ready(function() {
     $("body").on("click", "#membutton", function(event) {
         event.preventDefault();
     })
+
+    $("body").on("click", "#changeprof", function(event){
+        event.preventDefault();
+        $("#pictureform").toggle();
+
+    });
+
+    $("body").on("submit", "#pictureform", function(event){
+        event.preventDefault();
+        var info = $(this).serialize();
+        var url = $(this).attr("action")
+        $.ajax({
+            method: "PUT",
+            url: url,
+            data: info
+        }).done(function(response){
+            $("#picholder").html(response)
+            $("#pictureform").trigger("reset").toggle();
+        });
+
+
+    });
+
+    $("body").on("click", "#themebutton", function(event){
+        event.preventDefault();
+        $("#themeform").toggle();
+
+    });
+
+    $("body").on("submit", "#themeform", function(event){
+        event.preventDefault();
+        var info = $(this).serialize();
+        var url = $(this).attr("action")
+        $.ajax({
+            method: "PUT",
+            url: url,
+            data: info
+        }).done(function(response){
+            console.log(response)
+            $(".theme").html(response)
+            $("#themeform").trigger("reset").toggle();
+        });
+    });
+
 });
