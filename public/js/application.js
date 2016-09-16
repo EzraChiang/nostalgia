@@ -211,6 +211,9 @@ $(document).ready(function() {
 
     $("body").on("click", "#membutton", function(event) {
         event.preventDefault();
+        $.ajax({
+
+        })
     })
 
     $("body").on("click", "#changeprof", function(event){
@@ -250,10 +253,20 @@ $(document).ready(function() {
             url: url,
             data: info
         }).done(function(response){
-            console.log(response)
             $(".theme").html(response)
             $("#themeform").trigger("reset").toggle();
         });
+    });
+
+    $("body").on("click", "#nextsong", function(event){
+        event.preventDefault();
+        var url = $(this).attr("href")
+        $.ajax({
+            method: "GET",
+            url: url
+        }).done(function(response){
+            $("#songshow").html(response)
+        })
     });
 
 });

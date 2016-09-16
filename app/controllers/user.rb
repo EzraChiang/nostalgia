@@ -2,7 +2,16 @@ get '/users/new' do
   erb :'/users/new'
 end
 
-post '/users' do
+get '/users/:id' do
+  @user = User.find(params[:id])
+  @song = @user.songs.sample.url
+  if request.xhr?
+    erb :"users/_song", layout: false
+  end
+
+end
+
+post '/users/' do
   @user = User.new(params[:user])
   if @user.save
     session[:id] = @user.id
@@ -15,7 +24,13 @@ end
 
 get '/profile/:id' do
   @user = User.find(params[:id])
-  erb :"/users/profile"
+  @song = @user.songs.sample.url
+  @events = @user.events.sample(3)
+  if requst.xhr?
+    "Hello World"
+  else
+    erb :"/users/profile"
+  end
 end
 
 get '/login' do

@@ -1,0 +1,16 @@
+<h3>Who Am I?</h3>
+  <div class="row">
+    <div class="col-sm-4 theme">
+    <%= erb :"users/_theme"  %>
+    </div>
+    <div id="picholder" class="col-sm-4">
+    <%= erb :"users/_profilepic" %>
+    </div>
+    <div class="col-sm-4 theme">
+    <%= erb :"users/_theme"  %>
+    </div>
+  </div>
+  <h3>I'm <%= @user.username.upcase %></h3>
+  <audio controls autoplay>
+  <source src="<%= @song %>" type="audio/ogg">
+  </audio>

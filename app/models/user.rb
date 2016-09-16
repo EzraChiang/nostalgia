@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
-
+  has_many :songs
+  has_many :events
   validates :first_name, :last_name, :email, :username, presence: true
   validates :email, :username, uniqueness: true
+
 
   def password
     @password ||= BCrypt::Password.new(password_hash)

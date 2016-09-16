@@ -466,12 +466,23 @@ Memory.create(name: "Guardians of the Galaxy", picture: "http://cdn.mos.cms.futu
 Memory.create(name: "Furious 7", picture: "http://blogs-images.forbes.com/markhughes/files/2015/04/Furious-7.jpg", video: "https://www.youtube.com/embed/Skpu5HaVkOc?autoplay=1", text: "Furious 7 (often stylized as Furious Seven and alternatively known as Fast Seven or Fast & Furious 7) is a 2015 American action film directed by James Wan and written by Chris Morgan. It is the seventh installment in the Fast and the Furious franchise. The film stars Vin Diesel, Paul Walker, Dwayne Johnson, Michelle Rodriguez, Tyrese Gibson, Chris Bridges, Jordana Brewster, Kurt Russell, and Jason Statham.")
 Memory.create(name: "Kingsman", picture: "http://i.lv3.hbo.com/assets/images/movies/kingsman-the-secret-service/kingsman-the-secret-service-1024.jpg", video: "https://www.youtube.com/embed/kl8F-8tR8to?autoplay=1", text: "Kingsman: The Secret Service is a 2014 British-American spy action comedy film directed by Matthew Vaughn, and based on the comic book The Secret Service, created by Dave Gibbons and Mark Millar. The screenplay was written by Vaughn and Jane Goldman. It follows the recruitment and training of a potential secret agent, Gary Eggsy Unwin (Taron Egerton), into a secret spy organisation. Eggsy joins a mission to tackle a global threat from Richmond Valentine (Samuel L. Jackson), a wealthy megalomaniac.")
 
+User.create(first_name: "Ezra", last_name: "Chiang", email: "e@e.com", username: "Ezrawr", password: "aaa", profile_pic: "https://i.kinja-img.com/gawker-media/image/upload/jy5hvhabarwb1xkd8ef4.gif", profile_theme: "http://forgeandsmith.com/wp-content/uploads/2016/02/GIF-blog-loop.gif")
+Song.create(url: "/css/closer.ogg", user_id: 1)
+Song.create(url: "/css/count.ogg", user_id: 1)
+Song.create(url: "/css/mountain.ogg", user_id: 1)
+Song.create(url: "/css/zedd.ogg", user_id: 1)
 
+Event.create(url:"https://scontent-yyz1-1.xx.fbcdn.net/t31.0-8/12132490_10207682698208216_2050018940161569138_o.jpg", description: "Went Hiking in Malibu", user_id: 1)
+Event.create(url: "https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/11152701_1070128629667185_1856876775995991912_n.jpg?oh=f25b9ff2d2f2b12017497cd65d55936d&oe=5870BDB9", description:"We failed to escape the escape room", user_id: 1)
+Event.create(url: "https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/17730_1070746966272018_7162828497501475988_n.jpg?oh=fdbf4b0f45887069bbcea0659dd3c43a&oe=583A0FA7", description:"SOCAL Corgi Beach day then we went to get Brodards", user_id: 1)
+Event.create(url: "https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/10421177_895300193816697_2956974781501705114_n.jpg?oh=1775428751edfc7a5c302e0196426d6e&oe=5877D571", description:"UCLA Unicamp. The Adventure Time Squad", user_id: 1)
+Event.create(url: "https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/12376215_1231628340183879_6949546189376347674_n.jpg?oh=ca6342dc84ff2660e56035cb8cec0d90&oe=583F6D30", description:"Went to Disneyland!", user_id: 1)
+Event.create(url: "https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/11401231_1110889818924399_2792559701214521681_n.jpg?oh=641aba5ebd96c3f06a4c3f02153e640c&oe=587719B9", description:"UCLA Graduation day", user_id: 1)
+Event.create(url: "https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/553591_537412342938819_1555567686_n.jpg?oh=40ff7ec5f835bda4686627a67a990822&oe=586FE0F5", description:"Six Flags Fright Fest", user_id: 1)
+Event.create(url: "https://scontent-yyz1-1.xx.fbcdn.net/v/t34.0-12/13936472_1370361072977271_1831812620_n.jpg?oh=f64608f9131c3cd4cd2a2b0e6d7e68c1&oe=57DE0DE5" , description:"Fun Times at Catalina Island", user_id: 1)
+Event.create(url: "https://scontent-yyz1-1.xx.fbcdn.net/v/t35.0-12/13383919_1731183080496640_1004357603_o.jpg?oh=2ed0b2952de4f8b09ee256e75e80b00e&oe=57DEEA42", description:"Riding the Bruin Bear!", user_id: 1)
 
-
-
-
-
+# "http://image.cdnllnwnl.xosnetwork.com/pics32/200/QB/QBXPRWUIUYSHNNI.20110128214657.JPG"
 
 
 

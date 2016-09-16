@@ -42,51 +42,29 @@
             <p><input type="submit" value="SET THEME"></p>
           </form>
         </li>
-        <li><a href="#">Next Song</a></li>
+        <li><a id="nextsong" href="/users/<%= @user.id %>">Next Song</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container-fluid bg-1 text-center">
-  <h3>Who Am I?</h3>
-  <div class="row">
-    <div class="col-sm-4 theme">
-    <%= erb :"users/_theme"  %>
-    </div>
-    <div id="picholder" class="col-sm-4">
-    <%= erb :"users/_profilepic" %>
-    </div>
-    <div class="col-sm-4 theme">
-    <%= erb :"users/_theme"  %>
-    </div>
-  </div>
-  <h3>I'm <%= @user.username.upcase %></h3>
-  <audio controls autoplay>
-  <source src="/css/count.ogg" type="audio/ogg">
-  </audio>
-
+<div id="songshow" class="container-fluid bg-1 text-center">
+  <%= erb :"users/_song" %>
 </div>
 
 <div class="container-fluid bg-2 text-center memory">
-  <a id="membutton" href="#" class="btn btn-default btn-lg">Show me my memories!</a>
+  <a id="membutton" href="/" class="btn btn-default btn-lg">Show me my memories!</a>
 </div>
 
 <div class="container-fluid bg-3 text-center">
-  <h3>My Memories</h3>
+  <h3>My Events</h3>
   <div class="row">
+    <% @events.each do |event| %>
     <div class="col-sm-4">
-      <p>text: "Jurassic World is a 2015 American science fiction adventure film and the fourth installment of the Jurassic Park series. It was directed and co-written by Colin Trevorrow, produced by Frank Marshall and Patrick Crowley, and stars Chris </p>
-      <img class="img-rounded" src="http://forgeandsmith.com/wp-content/uploads/2016/02/GIF-blog-loop.gif" style="width:400px;height:400px; alt="Image">
+      <p><%= event.description %></p>
+      <img class="img-rounded" src="<%= event.url %>" style="width:400px;height:400px; alt="Image">
     </div>
-    <div class="col-sm-4">
-      <p>text: "Jurassic World is a 2015 American science fiction adventure film and the fourth installment of the Jurassic Park series. It was directed and co-written by Colin Trevorrow, produced by Frank Marshall and Patrick Crowley, and stars Chris </p>
-      <img class="img-rounded" src="http://forgeandsmith.com/wp-content/uploads/2016/02/GIF-blog-loop.gif" style="width:400px;height:400px; alt="Image">
-    </div>
-    <div class="col-sm-4">
-      <p>text: "Jurassic World is a 2015 American science fiction adventure film and the fourth installment of the Jurassic Park series. It was directed and co-written by Colin Trevorrow, produced by Frank Marshall and Patrick Crowley, and stars Chris </p>
-      <img class="img-rounded" src="http://forgeandsmith.com/wp-content/uploads/2016/02/GIF-blog-loop.gif" style="width:400px;height:400px; alt="Image">
-    </div>
+    <% end %>
   </div>
 </div>
 
