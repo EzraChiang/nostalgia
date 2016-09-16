@@ -204,4 +204,12 @@ $(document).ready(function() {
             $("body").append(response)
         });
     });
+
+    $("body").on("click", "#profpic", function(event) {
+        event.preventDefault();
+    })
+
+    $("body").on("click", "#membutton", function(event) {
+        event.preventDefault();
+    })
 });
