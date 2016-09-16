@@ -62,8 +62,22 @@ header {
     margin-top: -13px;
     position: relative;
     left: 10%;
-    top: -190px;
+    top: -110px;
     transform: translate(-50%, -50%)
 
 }
 
+.bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+}
+
+.bg-3 {
+    background-color: #ffffff;
+    color: #555555;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
